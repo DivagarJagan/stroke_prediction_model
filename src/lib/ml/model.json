@@ -1,0 +1,140 @@
+{
+  "model": "Logistic Regression",
+  "features": {
+    "numerical": [
+      "age",
+      "hypertension",
+      "heart_disease",
+      "avg_glucose_level",
+      "bmi"
+    ],
+    "categorical": [
+      "gender",
+      "ever_married",
+      "work_type",
+      "Residence_type",
+      "smoking_status"
+    ]
+  },
+  "imputer_medians": {
+    "age": 45.0,
+    "hypertension": 0.0,
+    "heart_disease": 0.0,
+    "avg_glucose_level": 91.945,
+    "bmi": 28.0
+  },
+  "scaler": {
+    "mean": [
+      43.35328767123288,
+      0.09711350293542075,
+      0.05406066536203522,
+      106.31716731898237,
+      28.883830724070453
+    ],
+    "scale": [
+      22.59405159481372,
+      0.29611225993368256,
+      0.22613736936351156,
+      45.254116442480864,
+      7.762968778066298
+    ]
+  },
+  "categories": {
+    "gender": [
+      "Female",
+      "Male",
+      "Other"
+    ],
+    "ever_married": [
+      "No",
+      "Yes"
+    ],
+    "work_type": [
+      "Govt_job",
+      "Never_worked",
+      "Private",
+      "Self-employed",
+      "children"
+    ],
+    "Residence_type": [
+      "Rural",
+      "Urban"
+    ],
+    "smoking_status": [
+      "Unknown",
+      "formerly smoked",
+      "never smoked",
+      "smokes"
+    ]
+  },
+  "coef": [
+    1.8791493228595633,
+    0.17664158764779941,
+    0.052695014120249475,
+    0.19955665625540397,
+    0.0492354733795315,
+    -0.08899347605590864,
+    -0.21951830374635822,
+    -0.009578710370066279,
+    -0.07954551819872843,
+    -0.23854497197360816,
+    -0.2540701394240179,
+    -0.04376183518376204,
+    -0.22951955550456773,
+    -0.4702094059983935,
+    0.6794704459384073,
+    -0.23450919984124274,
+    -0.08358129033109037,
+    -0.1567459641562439,
+    -0.004955159479188398,
+    -0.3251533912303862,
+    0.16876402469348578
+  ],
+  "intercept": -0.38460613728630294,
+  "metrics": {
+    "accuracy": 0.7455968688845401,
+    "precision": 0.13793103448275862,
+    "recall": 0.8,
+    "f1_score": 0.23529411764705882,
+    "roc_auc": 0.8436625514403292,
+    "confusion_matrix": {
+      "tn": 722,
+      "fp": 250,
+      "fn": 10,
+      "tp": 40
+    },
+    "train_size": 4088,
+    "test_size": 1022
+  },
+  "dataset": {
+    "total_records": 5110,
+    "feature_count": 10,
+    "stroke_cases": 249,
+    "non_stroke_cases": 4861,
+    "missing_values_handled": {
+      "bmi": 201,
+      "smoking_status_unknown": 1544
+    },
+    "age_mean": 43.226614481409,
+    "glucose_mean": 106.1476771037182,
+    "bmi_mean": 28.893236911794666,
+    "gender_counts": {
+      "Female": 2994,
+      "Male": 2115,
+      "Other": 1
+    },
+    "smoking_counts": {
+      "never smoked": 1892,
+      "Unknown": 1544,
+      "formerly smoked": 885,
+      "smokes": 789
+    },
+    "stroke_rate_by_age": {
+      "0-20": 0.001951219512195122,
+      "21-40": 0.004922067268252666,
+      "41-60": 0.040973111395646605,
+      "61-80": 0.12962962962962962,
+      "80+": 0.19827586206896552
+    }
+  }
+}
