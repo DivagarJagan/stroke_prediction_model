@@ -11,12 +11,13 @@ node_modules
 dist
 dist-ssr
 .output
+.vercel
 .vinxi
 .tanstack/**
 .nitro
 *.local
 
-# Wrangler / Cloudflare
+# Local deployment state
 .wrangler/
 .dev.vars
 

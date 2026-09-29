@@ -29,7 +29,8 @@ The trained model parameters are exported to `src/lib/ml/model.json`. The web ap
 
 Install these tools before opening the project in VS Code:
 
-- Node.js 20 or newer and npm
+To validate the deployment bundle without publishing it:
+
 - Python 3.10 or newer for model training
 - Git, if cloning the repository
 - Visual Studio Code
@@ -38,7 +39,7 @@ Install these tools before opening the project in VS Code:
 Check the installed versions in the VS Code integrated terminal:
 
 ```powershell
-node --version
+and deploys it whenever `main` is updated.
 npm --version
 python --version
 git --version
@@ -135,6 +136,30 @@ npm run preview      # Preview the production build locally
 npm run lint         # Run ESLint
 npm run format       # Format project files with Prettier
 ```
+
+## Deploy to Vercel
+
+The production target is Vercel. The TanStack Start build uses Nitro's Vercel
+preset and generates a complete SSR deployment bundle in `.vercel/output`.
+
+Install the Vercel CLI, authenticate, link the project, and deploy:
+
+```powershell
+npm ci
+npm install --global vercel
+npx vercel login
+npx vercel link
+npm run deploy
+```
+
+To validate the deployment bundle without publishing it:
+
+```powershell
+npm run deploy:dry-run
+```
+
+Alternatively, import the repository in the Vercel dashboard. Vercel will run
+`npm ci`, execute `npm run build`, and publish the generated SSR output.
 
 ## Project Structure
 
